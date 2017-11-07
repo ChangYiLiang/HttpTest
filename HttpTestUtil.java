@@ -122,6 +122,8 @@ public class HttpTestUtil {
     public static String sendPost(String url, File file) {
         String result = null;
         HttpPost httpPost = new HttpPost(url);
+
+
         // 防止被当成攻击添加的
         httpPost.setHeader("User-Agent", userAgent);
         MultipartEntityBuilder multipartEntity = MultipartEntityBuilder.create();
